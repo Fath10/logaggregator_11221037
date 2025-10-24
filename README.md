@@ -1,5 +1,8 @@
 # Log Aggregator Service - Pub/Sub dengan Idempotency & Deduplication
 
+🎥 **Video Demo**: [Tonton di YouTube](https://youtu.be/qVEZrpUy-2Q?si=CZMbD9Rv7Gsf5ckd)
+📄 **PDF Teori**: https://drive.google.com/file/d/12pRvQV7InDwCyR1EMXm9JFL6bUXJzAxo/view?usp=sharing
+
 ## 📋 Deskripsi
 
 Layanan **Log Aggregator** berbasis Python (FastAPI + asyncio) yang mengimplementasikan pola Pub-Sub dengan fitur:
@@ -10,8 +13,6 @@ Layanan **Log Aggregator** berbasis Python (FastAPI + asyncio) yang mengimplemen
 - ✅ **In-memory Queue**: Async processing dengan asyncio.Queue
 - ✅ **RESTful API**: Endpoint untuk publish, query, dan monitoring
 - ✅ **Docker Support**: Dockerfile dan Docker Compose siap production
-
----
 
 ## 🚀 Quick Start
 
@@ -365,10 +366,7 @@ docker restart log-aggregator
 
 - **README.md** - Setup dan API documentation (file ini)
 - **report.md** - Design decisions dan analisis teknis
-- **QUICKSTART.md** - Panduan cepat 3 langkah
-- **POWERSHELL.md** - Script PowerShell untuk Windows
 - **TECHNICAL_REPORT.md** - Analisis mendalam
-- **SAMPLE_OUTPUT.md** - Contoh output dan responses
 
 ---
 
@@ -418,7 +416,6 @@ Untuk pertanyaan atau issues:
 
 ---
 
-**Built with ❤️ using FastAPI + Python + Docker**
 
 ```
 ┌─────────────┐

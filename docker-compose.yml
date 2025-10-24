@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   log-aggregator:
     build:
@@ -9,32 +7,29 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      # Persist SQLite database across container restarts
       - ./data:/app/data
     environment:
       - PYTHONUNBUFFERED=1
       - LOG_LEVEL=INFO
     restart: unless-stopped
     healthcheck:
-      test: ["CMD", "python", "-c", "import requests; requests.get('http://localhost:8080/stats')"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-      start_period: 5s
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8080/health').read()"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
 
-  # Publisher simulator (optional - for testing)
-  publisher-simulator:
+  publisher:
     build:
       context: .
       dockerfile: Dockerfile.publisher
-    container_name: publisher-simulator
+    container_name: publisher
     depends_on:
-      - log-aggregator
+      log-aggregator:
+        condition: service_healthy
     environment:
       - AGGREGATOR_URL=http://log-aggregator:8080
       - PYTHONUNBUFFERED=1
-    profiles:
-      - testing
     restart: "no"
 
 volumes:
