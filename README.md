@@ -1,7 +1,7 @@
 # Log Aggregator Service - Pub/Sub dengan Idempotency & Deduplication
 
 🎥 **Video Demo**: [Tonton di YouTube](https://youtu.be/qVEZrpUy-2Q?si=CZMbD9Rv7Gsf5ckd)
-📄 **PDF Teori**: [Link_Drive] (https://drive.google.com/file/d/12pRvQV7InDwCyR1EMXm9JFL6bUXJzAxo/view?usp=sharing)
+📄 **PDF Teori**: [Link Drive](https://drive.google.com/file/d/12pRvQV7InDwCyR1EMXm9JFL6bUXJzAxo/view?usp=sharing)
 
 ## 📋 Deskripsi
 
